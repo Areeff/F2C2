@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="heading">Student Portal</p>
+    <main id="main-item">
+      <form class="form">
+        <input
+          type="search"
+          id="search-button"
+          placeholder="Search"
+          onkeyup="searchFunction()"
+          required
+        />
+        <button id="btn" onclick="searchFunction(); return false;">
+          Search
+        </button>
+      </form>
+
+      <div class="form div-ele">
+        <button id="sort AtoZ" onclick="sortasc();return false;" class="btn-1">
+          Sort A->Z
+        </button>
+        <button id="sort ZtoA" class="btn-1" onclick="sortdesc();return false;">
+          Sort Z->A
+        </button>
+        <button id="marks" class="btn-1" onclick="sortByMarks();return false;">
+          Sort By Marks
+        </button>
+        <button id="passing" class="btn-1" onclick="passing();return false;">
+          Sort By Passing
+        </button>
+        <button id="class" class="btn-1" onclick="sortByclass();return false;">
+          Sort By class
+        </button>
+        <button
+          id="gender"
+          class="btn-1"
+          onclick="sortByGender();return false;"
+        >
+          Sort By Gender
+        </button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Marks</th>
+            <th>Passing</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
